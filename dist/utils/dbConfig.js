@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dbConfig = exports.url = void 0;
 const mongoose_1 = require("mongoose");
-exports.url = "mongodb://127.0.0.1:27017/startUpDB";
+exports.url = "mongodb://127.0.0.1:27017/SkillScapeDB";
 const dbConfig = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield (0, mongoose_1.connect)(exports.url).then(() => {
