@@ -1,4 +1,7 @@
 import { connect } from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+
 export const URL: string | any =
   "mongodb+srv://skillscapeofficier:skillscapeofficier@cluster0.0dubq.mongodb.net/skillScapeDb?retryWrites=true&w=majority&appName=Cluster0";
 
