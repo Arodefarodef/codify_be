@@ -5,7 +5,7 @@ import { dbConfig } from "./utils/dbConfig";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 const app: Application = express();
-const PORT: number = process.env.PORT!;
+const port: number | any = process.env.PORT!;
 
 app.use(cors({ origin: ["*"] }));
 app.use(express.json());
@@ -23,8 +23,8 @@ app.use(
 
 mainApp(app);
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(port, () => {
   console.clear();
-
+  console.log("server running");
   dbConfig();
 });
