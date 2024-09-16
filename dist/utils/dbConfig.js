@@ -9,17 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dbConfig = exports.url = void 0;
+exports.dbConfig = exports.URL = void 0;
 const mongoose_1 = require("mongoose");
-exports.url = process.env.MONGODB_ONLINE;
+exports.URL = "mongodb+srv://skillscapeofficier:skillscapeofficier@cluster0.0dubq.mongodb.net/skillScapeDb?retryWrites=true&w=majority&appName=Cluster0";
 const dbConfig = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield (0, mongoose_1.connect)(exports.url).then(() => {
+        yield (0, mongoose_1.connect)(exports.URL).then(() => {
             console.log("Connected... ❤️❤️🚀🚀🎮🎮");
         });
     }
     catch (error) {
-        console.log("Error connecting to database");
+        console.error(error.message);
+        console.log(`Error connecting to database ${error.message}`);
         process.exit(1);
     }
 });

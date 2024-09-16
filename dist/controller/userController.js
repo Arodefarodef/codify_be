@@ -13,10 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.resetUserPassword = exports.forgetUserPassword = exports.verifyUserAccount = exports.createUser = void 0;
-const userModel_1 = __importDefault(require("../model/userModel"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const email_1 = require("../utils/email");
 const crypto_1 = __importDefault(require("crypto"));
+const userModel_1 = __importDefault(require("../model/userModel"));
 const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email, password } = req.body;
